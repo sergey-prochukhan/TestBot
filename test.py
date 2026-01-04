@@ -4,9 +4,9 @@ from telebot import types
 bot = telebot.TeleBot('8513847851:AAG3PzwcGTbYO25syg-vsEWtki59dVGgwl8')
 
 menu = types.ReplyKeyboardMarkup (resize_keyboard=True)
-ansyes = types.ReplyKeyboardButton ("Да")
-ansno = types.ReplyKeyboardButton ("Нет")
-anselse = types.ReplyKeyboardButton ("Иное")
+ansyes = types.KeyboardButton ("Да")
+ansno = types.KeyboardButton ("Нет")
+anselse = types.KeyboardButton ("Иное")
 menu.add(ansyes,ansno,ansyes)
 
 @bot.message_handler(commands=['start'])
@@ -26,5 +26,6 @@ def forward(message):
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup = menu)
 	
 bot.infinity_polling()
+
 
 
