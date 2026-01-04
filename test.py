@@ -21,9 +21,10 @@ def text_messages(message):
 	elif message.text == "Иное":
 		bot.send_message(message.chat.id, "Расскажите поподробнее:", reply_markup = types.ReplyKeyboardRemove())
 
-def forward(message)
+def forward(message):
 	bot.forward_message(chat_id='@salebot_se', from_chat_id = message.chat.id, message_id=message.id)
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup = menu)
 	
 bot.infinity_polling()
+
 
