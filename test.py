@@ -1,7 +1,13 @@
+import os
 import telebot
 from telebot import types
+from dotenv import load_dotenv
 
-bot = telebot.TeleBot('')
+load_dotenv()
+BOT_KEY = os.getenv('BOT_KEY')
+
+bot = telebot.TeleBot(BOT_KEY)
+
 
 menu = types.ReplyKeyboardMarkup (resize_keyboard=True)
 ansyes = types.KeyboardButton ("Да, всё отлично")
@@ -17,7 +23,7 @@ def start_message (message):
 def text_messages(message):
 	if message.text == "Да, всё отлично":
 		bot.send_message(message.chat.id, "Отлично! Спасибо что уделили время", reply_markup=types.ReplyKeyboardRemove())
-		#threeding.Timer(5, sheduler)		
+		
 	elif message.text == "Нет":
 		bot.send_message(message.chat.id, "Опишите поподробнее, что пошло не так:", reply_markup=types.ReplyKeyboardRemove())
 		bot.register_next_step_handler(message, forward)
