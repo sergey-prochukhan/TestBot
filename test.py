@@ -25,12 +25,13 @@ def text_messages(message):
 		bot.register_next_step_handler(message, forward)
 		
 def forward(message):
-	bot.forward_message(chat_id='@TestAnswer', from_chat_id = message.chat.id, message_id=message.id)
+	bot.forward_message(chat_id='@Test_Answer', from_chat_id = message.chat.id, message_id=message.id)
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup=menu)
 	
 bot.infinity_polling()
 
 #Test
+
 
 
 
