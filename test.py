@@ -13,7 +13,7 @@ menu.add(ansyes,ansno,ansyes)
 def start_message (message):
 	bot.send_message(message.chat.id, "Тестовый бот для проверки системы хостинга чат ботов Bothost в связке с github. Для оценки работы сервиса отправьте ответ на вопрос: Видите ли вы это сообщение и меню с конпками?", reply_markup = menu)
 
-def text_messages(message)
+def text_messages(message):
 	if message.text == "Да":
 		bot.send_message(message.chat.id, "Отлично! спасибо за оценку!")
 	elif message.text == "Нет":
@@ -26,3 +26,4 @@ def forward(message)
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup = menu)
 	
 bot.infinity_polling()
+
