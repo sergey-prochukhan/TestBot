@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('8513847851:AAG3PzwcGTbYO25syg-vsEWtki59dVGgwl8')
+bot = telebot.TeleBot('')
 
 menu = types.ReplyKeyboardMarkup (resize_keyboard=True)
 ansyes = types.KeyboardButton ("Да, всё отлично")
@@ -35,6 +35,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
