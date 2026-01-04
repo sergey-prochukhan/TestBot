@@ -7,7 +7,7 @@ menu = types.ReplyKeyboardMarkup (resize_keyboard=True)
 ansyes = types.KeyboardButton ("Да")
 ansno = types.KeyboardButton ("Нет")
 anselse = types.KeyboardButton ("Иное")
-menu.add(ansyes,ansno,ansyes)
+menu.add(ansyes,ansno,anselse)
 
 @bot.message_handler(commands=['start'])
 def start_message (message):
@@ -26,6 +26,7 @@ def forward(message):
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup = menu)
 	
 bot.infinity_polling()
+
 
 
 
