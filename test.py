@@ -1,4 +1,4 @@
-import os
+"""import os
 import telebot
 from telebot import types
 from dotenv import load_dotenv
@@ -40,7 +40,7 @@ def forward(message):
 	
 bot.infinity_polling()
 
-#Test
+#Test"""
 
 
 
