@@ -1,10 +1,9 @@
 import os
 import telebot
 from telebot import types
-from dotenv import load_dotenv
 
-load_dotenv()
-BOT_KEY = os.getenv('TELEGRAM_BOT_TOKEN')
+
+BOT_KEY = os.environ["TELEGRAM_BOT_TOKEN"]
 
 bot = telebot.TeleBot(BOT_KEY)
 
