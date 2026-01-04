@@ -15,7 +15,7 @@ def start_message (message):
 
 def text_messages(message):
 	if message.text == "Да, всё отлично":
-		bot.forward_message(chat_id='@salebot_se', from_chat_id = message.chat.id, message_id=message.id)
+		bot.forward_message(chat_id='@Test', from_chat_id = message.chat.id, message_id=message.id)
 		bot.send_message(message.chat.id, "Отлично! Спасибо что уделили время")
 	elif message.text == "Нет":
 		bot.send_message(message.chat.id, "Опишите поподробнее, что пошло не так:", reply_markup=types.ReplyKeyboardRemove())
@@ -24,12 +24,13 @@ def text_messages(message):
 		bot.send_message(message.chat.id, "Расскажите поподробнее:", reply_markup = types.ReplyKeyboardRemove())
 		bot.register_next_step_handler(message, forward)
 def forward(message):
-	bot.forward_message(chat_id='@salebot_se', from_chat_id = message.chat.id, message_id=message.id)
+	bot.forward_message(chat_id='@Test', from_chat_id = message.chat.id, message_id=message.id)
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup = menu)
 	
 bot.infinity_polling()
 
 #Test
+
 
 
 
