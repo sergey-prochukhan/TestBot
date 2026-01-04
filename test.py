@@ -1,4 +1,4 @@
-"""import os
+import os
 import telebot
 from telebot import types
 from dotenv import load_dotenv
@@ -35,13 +35,12 @@ def forward(message):
 	bot.forward_message(chat_id='@Test_Answer_b', from_chat_id = message.chat.id, message_id=message.id)
 	bot.send_message(message.chat.id, "Спасибо, что уделили время.", reply_markup=menu)
 
-#def sheduler(message):
-    #bot.send_message(chat_id=context.job.context, text='Это сообщение отправлено с задержкой в 5 секунд')
+"""def sheduler(message):
+    bot.send_message(chat_id=context.job.context, text='Это сообщение отправлено с задержкой в 5 секунд')"""
 	
 bot.infinity_polling()
 
-#Test"""
-
+#Test
 
 
 
