@@ -8,7 +8,7 @@ BOT_KEY = os.environ["TELEGRAM_BOT_TOKEN"]
 bot = telebot.TeleBot(BOT_KEY)
 
 
-menu = types.ReplyKeyboardMarkup (resize_keyboard=True)
+menu = types.InlineKeyboardMarkup (resize_keyboard=True)
 ansyes = types.KeyboardButton ("Да, всё отлично")
 ansno = types.KeyboardButton ("Нет")
 anselse = types.KeyboardButton ("Иное")
@@ -27,7 +27,7 @@ def text_messages(message):
 		bot.send_message(message.chat.id, "Опишите поподробнее, что пошло не так:", reply_markup=types.ReplyKeyboardRemove())
 		bot.register_next_step_handler(message, forward)
 	elif message.text == "Иное":
-		bot.send_message(message.chat.id, "Расскажите поподробнее:", reply_markup = types.ReplyKeyboardRemove())
+		bot.send_message(message.chat.id, "Расскажите поподробнее:", reply_markup = types.InlineKeyboardRemove())
 		bot.register_next_step_handler(message, forward)
 		
 def forward(message):
@@ -40,6 +40,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
