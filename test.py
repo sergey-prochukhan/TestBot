@@ -1,7 +1,6 @@
 import os
 import telebot
 from telebot import types
-from telebot import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 BOT_KEY = os.environ["TELEGRAM_BOT_TOKEN"]
@@ -9,10 +8,10 @@ BOT_KEY = os.environ["TELEGRAM_BOT_TOKEN"]
 bot = telebot.TeleBot(BOT_KEY)
 
 
-menu = InlineKeyboardMarkup ()
-menu.add(InlineKeyboardButton('Да, всё отлично!', callback_data='Да, всё отлично!'))
-menu.add(InlineKeyboardButton('Нет', callback_data='Нет'))
-menu.add(InlineKeyboardButton('Иное', callback_data='Иное'))							  
+menu = types.InlineKeyboardMarkup ()
+menu.add(types.InlineKeyboardButton('Да, всё отлично!', callback_data='Да, всё отлично!'))
+menu.add(types.InlineKeyboardButton('Нет', callback_data='Нет'))
+menu.add(types.InlineKeyboardButton('Иное', callback_data='Иное'))							  
 
 '''ansyes = types.KeyboardButton ("Да, всё отлично")
 ansno = types.KeyboardButton ("Нет")
@@ -45,6 +44,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
