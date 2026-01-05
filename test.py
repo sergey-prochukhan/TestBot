@@ -24,13 +24,13 @@ def start_message (message):
 
 @bot.message_handler(content_types=['text'])
 def text_messages(message):
-	if message.text == "Да, всё отлично":
+	if 	menu.callback_data == "Да, всё отлично":
 		bot.send_message(message.chat.id, "Отлично! Спасибо что уделили время", reply_markup=types.InlineKeyboardRemove())
 		
-	elif message.text == "Нет":
+	elif menu.callback_data == "Нет":
 		bot.send_message(message.chat.id, "Опишите поподробнее, что пошло не так:"""", reply_markup=types.ReplyKeyboardRemove()""")
 		bot.register_next_step_handler(message, forward)
-	elif message.text == "Иное":
+	elif menu.callback_data == "Иное":
 		bot.send_message(message.chat.id, "Расскажите поподробнее:"""", reply_markup = types.InlineKeyboardRemove()""")
 		bot.register_next_step_handler(message, forward)
 		
@@ -44,6 +44,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
