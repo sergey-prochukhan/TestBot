@@ -9,7 +9,7 @@ bot = telebot.TeleBot(BOT_KEY)
 
 
 menu = types.InlineKeyboardMarkup ()
-menu.add(InlineKeyboardButton('Да, всё отлично!', callback_data('Да, всё отлично!'))
+menu.add(InlineKeyboardButton("Да, всё отлично!", callback_data("Да, всё отлично!"))
 menu.add(InlineKeyboardButton('Нет', callback_data('Нет'))
 menu.add(InlineKeyboardButton('Иное', callback_data('Иное'))							  
 
@@ -44,6 +44,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
