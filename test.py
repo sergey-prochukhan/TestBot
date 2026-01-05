@@ -8,7 +8,7 @@ BOT_KEY = os.environ["TELEGRAM_BOT_TOKEN"]
 bot = telebot.TeleBot(BOT_KEY)
 
 
-menu = types.InlineKeyboardMarkup (resize_keyboard=True)
+menu = types.InlineKeyboardMarkup ("""resize_keyboard=True""")
 ansyes = types.KeyboardButton ("Да, всё отлично")
 ansno = types.KeyboardButton ("Нет")
 anselse = types.KeyboardButton ("Иное")
@@ -40,6 +40,7 @@ def forward(message):
 bot.infinity_polling()
 
 #Test
+
 
 
 
